@@ -1,4 +1,4 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.24;
 
 contract Election {
     // Model a Candidate
@@ -47,6 +47,6 @@ contract Election {
         candidates[_candidateId].voteCount++;
 
         // trigger voted event
-        votedEvent(_candidateId);
+        emit votedEvent(_candidateId);
     }
 }
